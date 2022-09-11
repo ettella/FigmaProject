@@ -1,0 +1,178 @@
+
+.container {
+    width:315;
+    height: 330px;
+    margin-bottom: -20px;
+
+}
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 24px;
+    
+    position: absolute;
+    width: 329px;
+    height: 250px;
+    left: 24px;
+    top: 238px;
+}
+
+.form-container p {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: center;
+    margin-left: 130px; /* 158 px seems too much*/
+}
+
+.input-container{
+    height: 56px;
+    width: 329px;
+    left: 0px;
+    top: 0px;
+    border-radius: 0px;
+    margin-bottom: 24px;
+}
+
+input {
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+
+    width: 329px;
+    height: 56px;
+
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+    color: black;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+
+    letter-spacing: 0.5px;
+    padding-left: 1em;
+   
+}
+
+.frame-container {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+padding: 0px;
+
+width: 329px;
+height: 90px;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 2;
+flex-grow: 0;
+}
+
+button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 16px;
+    gap: 16px;
+
+    width: 329px;
+    height: 52px;
+
+    /* custom/primary */
+
+    background: #3F51B5;
+    border-radius: 4px;
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+
+    text-transform: uppercase;
+    border:none
+   
+}
+
+.second {
+    margin-bottom: 24px;
+}
+
+.second input {
+    margin-bottom: 24px;
+}
+
+a {
+    color: #3F51B5;
+}
+
+.frame-container div {
+    margin-top: 16px;
+    color: #3F51B5; 
+ } 
+
+ ::-ms-reveal {
+    display: none;
+ }
+
+ .wallpaperTop {
+    position: absolute;
+    height: 167px;
+    left: 1px;
+    right: -1px;
+    top: 0px;
+    width: 375px;
+}
+
+.wallpaperBottom {
+    position: absolute;
+    height: 200px;
+    left: 1px;
+    right: -1px;
+    bottom: 0px;
+    width: 375px;
+    margin-top: 30px;
+}
+
+span {
+    font-size: 12px;
+}
+
+.usericon {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    right: 16px;
+    top: 0px;
+    margin-top: 95px;
+}
+
+.eyeicon {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    right: 16px;
+    top: 0px;
+    margin-top: 175px;
+}
+
+.error {
+    border: 1px solid red;
+}
+
+.error-feedback{
+    color:red
+}

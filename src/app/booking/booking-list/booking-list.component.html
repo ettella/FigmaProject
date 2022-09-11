@@ -1,0 +1,13 @@
+
+  <div class="row">
+    <div class="col-xs-12 gap">
+      <app-booking-item
+      *ngFor="let bookingEl of booking"
+      [booking]="bookingEl"
+      (placeSelected)="onPlaceSelected(bookingEl)"
+      (click)="onSelectToList()"
+      >
+    </app-booking-item>
+    </div>
+
+  </div>

@@ -1,0 +1,50 @@
+<img src="./assets/eisberg.png" alt="eisberg" class="wallpaperTop" />
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="form-container">
+        <p class="my-2">Login</p>
+
+        <form class="form-group" [formGroup]="myForm" (ngSubmit)="onSubmit()">
+          <div class="input-container">
+            <label for="username" class="form-label"></label>
+            <input
+              type="text"
+              name="username"
+              id="username"
+              placeholder="Username"
+              class="form-control"
+              formControlName="username"
+              [class.error]="username.touched && username.invalid"
+            />
+            <img src="./assets/user.png" alt="password" class="usericon">
+            <span *ngIf="username.touched && username.hasError('required')" class="error-feedback">This field is required!</span>
+          </div>
+
+          <div class="input-container mb-5">
+            <label for="password" class="form-label"></label>
+            <input
+              type="password"
+              name="password"
+              id="password"
+              placeholder="Password"
+              class="form-control"
+              formControlName="password"
+              [class.error]="password.touched && password.invalid"
+            />
+            <img src="./assets/eye.png" alt="password" class="eyeicon">
+            <span *ngIf="password.touched && password.hasError('required')" class="error-feedback">This field is required!</span>
+          </div>
+
+          <div class="frame-container">
+            <button class="btn btn-primary" type="submit" routerLink="/booking" [disabled]="myForm.invalid">
+              l o g i n
+            </button>
+            <div>Not account yet? <a href="#">Register</a></div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<img src="./assets/eisberg.png" alt="eisberg" class="wallpaperBottom" />

@@ -1,0 +1,63 @@
+
+   <div class="row field">
+   <div class="col-xs-12 mt-5 headerfield">
+        <h5 class="mx-3"> Let's start a new trip!</h5>
+        <a 
+        routerLink="/login"
+        > 
+        <img src="./assets/mat-avatar.png" alt="login"></a>
+    </div>
+    <div class="col-xs-12 gap">
+      <app-booking-detail
+        *ngIf="selectedPlace; else slider"
+        [booking]="selectedPlace"
+        (nextPlaceSelected)="actualPlaceItem()"></app-booking-detail>
+      <ng-template #slider>
+
+        <div class="col-xs-12">
+          <img
+          src="./assets/vien01.png"
+          alt="vien"
+          class="img-responsive"
+          style="width: 344px; max-height:221px">
+        </div>
+        <div class="placeholder"></div>
+
+      </ng-template> 
+    </div>
+    
+  <div class="row">
+      <div class="col-6">
+        <app-booking-list
+          (placeWasSelected)="selectedPlace = $event">
+        </app-booking-list>
+      </div>
+      <div class="col-6">
+        <app-booking-list
+          (placeWasSelected)="selectedPlace = $event">
+        </app-booking-list>
+      </div>
+  </div>
+
+  <div class="col-xs-12 mt-5 footerfield">
+    <div class="icons">
+      <img src="./assets/icon01.png" alt="recent">
+      <p>Recent</p>
+    </div>
+
+    <div class="icons">
+      <img src="./assets/icon02.png" alt="recent">
+      <p>Favorites</p>
+    </div>
+
+    <div class="icons">
+      <img src="./assets/icon03.png" alt="recent">
+      <p>Nearby</p>
+    </div>
+   
+</div>
+    
+    <div>
+
+
+  
